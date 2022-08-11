@@ -59,17 +59,21 @@ isFavorite ? `My favorite food is ${food}!` : `I recently ate ${food}`
 // Create a new variable "vegetables" and assign it to an Array of 5 different
 // vegetables, represented by their names as Strings.
 
+let vegetables = ["cucumber", "broccoli", "squash", "spinach", "kale"];
 
 // Write the code to access the 3rd element of the Array, using bracket
 // notation.
 
+console.log(vegetables[2]);
 
 // Create a new variable "fruits" and assign it to an Array of 7
 // different fruits.
 
+let fruits = ["apple", "tomatoe", "pear", "peach", "orange", "grape", "strawberry"];
 
 // Write the code to access the 5th element of the array, using bracket notation.
 
+console.log(fruits[4]);
 
 //------------------------- Objects -------------------------//
 
