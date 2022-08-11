@@ -33,9 +33,7 @@ let isFavorite = false;
 // variable should be true, otherwise it should be false. You MUST use a
 // comparison operator.
 
-let shouldOrderMore = true;
-
-inStock < 20 ? shouldOrderMore : !shouldOrderMore;
+let shouldOrderMore = inStock < 20 ? true : false;
 
 
 //------------------------- Conditionals -------------------------//
