@@ -11,16 +11,16 @@
 
 var food = "Ice Cream";
 var type = "Dessert";
-var inStock = 10
-
-
+var inStock = 10;
 
 // Reassign (not initialize) your "inStock" variable from above. We got a new shipment! Use a built in math operator to make
 // the inStock count double what it currently is.
 
+instock = 10 * 2;
 
 // Reassign (not initialize) your "inStock" variable from above. You got hungry and needed a snack!
 // Use a built in math operator to decrement the inStock count by 1.
+
 
 
 // Initialize a new variable "isFavorite", and assign it to a boolean value indicating
