@@ -4,19 +4,15 @@ function takeOrder(order, deliveryOrders) {
 }
 
 function refundOrder(orderNumber, deliveryOrders) {
-
   for (i = 0; i < deliveryOrders.length; i++) {
-    if(deliveryOrders[i].orderNumber === orderNumber) {
-      deliveryOrders.splice(i, 1)
-    }
+    deliveryOrders[i].orderNumber === orderNumber &&
+      deliveryOrders.splice(i, 1);
   }
 }
 
 function listItems(deliveryOrders) {
   let orderNames = [];
-  deliveryOrders.forEach((order, i) => {
-    orderNames.push(order.item)
-  });
+  deliveryOrders.forEach(order => orderNames.push(order.item));
   return orderNames.join(', ');
 }
 
