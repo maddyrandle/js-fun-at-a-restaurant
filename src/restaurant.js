@@ -10,20 +10,24 @@ function createRestaurant(name) {
 }
 
 function addMenuItem(pizzaRestaurant, menuItem) {
-  let itemType = menuItem.type
-  !pizzaRestaurant.menus[itemType].includes(menuItem) &&
-    pizzaRestaurant.menus[itemType].push(menuItem);
+  let typeOfMeal = menuItem.type
+  !pizzaRestaurant.menus[typeOfMeal].includes(menuItem) &&
+    pizzaRestaurant.menus[typeOfMeal].push(menuItem);
 }
 
-function removeMenuItem(pizzaRestaurant, menuItemName, itemType) {
- if(pizzaRestaurant.menus[itemType].length === 0) {
-   return `Sorry, we don't sell ${menuItemName}, try adding a new recipe!`;
+function removeMenuItem(pizzaRestaurant, menuItemName, typeOfMeal) {
+  let typeOfMealArr = pizzaRestaurant.menus[typeOfMeal];
+  let error1 = `No one is eating our ${menuItemName} - it has been removed from the ${typeOfMeal} menu!`;
+  let error2 = `Sorry, we don't sell ${menuItemName}, try adding a new recipe!`;
+
+ if(typeOfMealArr.length === 0) {
+   return error2;
  } else {
-    for (var i = 0; i <= pizzaRestaurant.menus[itemType].length; i++) {
-      pizzaRestaurant.menus[itemType].splice(pizzaRestaurant.menus[itemType][i], 1);
-      return `No one is eating our ${menuItemName} - it has been removed from the ${itemType} menu!`;
-     }
- }
+    for (var i = 0; i <= typeOfMealArr.length; i++) {
+      typeOfMealArr.splice(typeOfMealArr[i], 1);
+      return error1;
+    };
+ };
 }
 
 module.exports = {
