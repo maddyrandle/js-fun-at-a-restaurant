@@ -17,12 +17,14 @@ class Chef {
     let menu = this.restaurant.menus;
     let menuItemType = foodItem.type;
     let menuItemTypeArr = menu[menuItemType];
+    let itemAvailableMessage = `Yes, we're serving ${foodItem.name} today!`;
+    let itemUnavailableMessage = `Sorry, we aren't serving ${foodItem.name} today.`;
 
     if(menuItemTypeArr.length === 0) {
-      return `Sorry, we aren't serving ${foodItem.name} today.`;
+      return itemUnavailableMessage;
     } else {
        for (var i = 0; i <= menuItemTypeArr.length; i++) {
-         return `Yes, we're serving ${foodItem.name} today!`;
+         return itemAvailableMessage;
        };
     };
   }
